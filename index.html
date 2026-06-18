@@ -1,91 +1,171 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>agrinho agro sustentavel</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho Agro Sustentável</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+}
+
+.acessibilidade{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.acessibilidade button{
+    padding: 8px 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.pular{
+    position:absolute;
+    left:-9999px;
+}
+
+.pular:focus{
+    left:10px;
+    top:10px;
+    background:#fff;
+    padding:10px;
+    border:2px solid #000;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>🌱projeto do agrinho🌱</h1>
-        <p>como cuidar e zelar do meio ambiente</p>
-    </header>
 
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#cuidados">cuidado</a>
-        <a href="#plantas">plantas</a>
-        <a href="#quiz">Quiz</a>
-    </nav>
+<a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
 
-    <section id="hero">
-        <h2>Bem-vindo a meu projeto do agrinho🌱</h2>
-        <p>Descubra os melhores jeitos de como cuidar do meio ambiente ex:plantas,Árvores.</p>
-        <button id="btnMensagem">Receber Dica</button>
-    </section>
+<div class="acessibilidade" aria-label="Controles de acessibilidade">
+    <button onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
+    <button onclick="diminuirFonte()" aria-label="Diminuir texto">A-</button>
+    <button onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
+    <button onclick="diminuirFonte()" aria-label="Diminuir texto">A-</button>
+    <button onclick="aumentarBrilho()" aria-label="Aumentar brilho">
+☀️+
+    </button>
+    <button onclick="diminuirBrilho()" aria-label="Diminuir brilho">
+</div>
 
-    <section id="sobre">
-        <h2>Sobre o cuidado com o meio ambiente</h2>
-        <p>
-        O meio ambiente é o conjunto de tudo o que existe na natureza e que permite a vida no planeta: ar, água, solo, plantas, animais 
-        e os ecossistemas. Cuidar dele é fundamental para a saúde, a economia e o bem-estar das pessoas.
-        Se a degradação ambiental continuar, várias consequências podem se tornar mais graves:queimadas,poluição e desmatamento
-        </p>
-    </section>
+<header>
+    <h1>🌱 Projeto do Agrinho 🌱</h1>
+    <p>Como cuidar e zelar do meio ambiente</p>
+</header>
 
-    <section id="cartas">
-        <h2>melhores formas de cuidar do meio ambiente</h2>
+<nav aria-label="Menu principal">
+    <a href="#sobre">Sobre</a>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#plantas">Plantas</a>
+    <a href="#quiz">Quiz</a>
+</nav>
 
-        <div class="cards-container">
-            <div class="card">
-                <h3>ACABAR COM A PULUIÇÂO</h3>
-                <p>não jogar lixos no chão no mato ou em plantacoẽs ou ate mesmo na rua,jogue no lixo e se não achar
-                    numa sacola e espere o lixeiro passar.</p>
-            </div>
+<main id="conteudo">
 
-            <div class="card">
-                <h3>DESMATAMENTO</h3>
-                <p>não cortar arvorés,matas e plantacões pois faz mudanças climaticas teremos menos alimentos entre outros.</p>
-            </div>
+<section id="hero">
+    <h2>Bem-vindo ao meu projeto do Agrinho 🌱</h2>
+    <p>Descubra maneiras de cuidar do meio ambiente, das plantas e das árvores.</p>
+    <button id="btnMensagem">Receber Dica</button>
+</section>
 
-            <div class="card">
-                <h3>queimadas</h3>
-                <p>não brincar com o fogo perto de arvorés e plantacões pois de causar varios tipos de desastres.</p>
-            </div>
-        </div>
-    </section>
+<section id="sobre">
+    <h2>Sobre o cuidado com o meio ambiente</h2>
+    <p>
+        O meio ambiente é o conjunto de tudo o que existe na natureza e que permite a vida no planeta:
+        ar, água, solo, plantas, animais e ecossistemas.
+        Cuidar dele é fundamental para a saúde, a economia e o bem-estar das pessoas.
+    </p>
+</section>
 
-    <section id="o que fazer?">
-        <h2>o que e recomendado fazer?</h2>
+<section id="cuidados">
+    <h2>Melhores formas de cuidar do meio ambiente</h2>
 
-        <ul>
-            <li>não desmatar</li>
-            <li>não quiemar</li>
-            <li>não sujar</li>
-            <li>guarde seus lixos</li>
-            <li>tenha cuidado com plantacoẽs</li>
-            <li>façam mais plantacoẽs</li>
-            <li>jogue o lixo no lixo</li>
-            <li></li>
-        </ul>
-    </section>
+    <div class="cards-container">
 
-    <section id="quiz">
-        <h2>Quiz rapido</h2>
-        <p>o que fazer com o seu lixo?</p>
+        <article class="card">
+            <h3>Combater a Poluição</h3>
+            <p>Não jogue lixo no chão, na mata ou na rua. Sempre descarte corretamente.</p>
+        </article>
 
-        <button onclick="verificarResposta('jogar no chão')">jogar no chão</button>
-        <button onclick="verificarResposta('jogar na mata')">jogar na mata</button>
-        <button onclick="verificarResposta('guardar e jogar no lixo')">guardar e jogar no lixo</button>
+        <article class="card">
+            <h3>Evitar o Desmatamento</h3>
+            <p>Preserve árvores e florestas para proteger o clima e a biodiversidade.</p>
+        </article>
 
-        <p id="resultado"></p>
-    </section>
+        <article class="card">
+            <h3>Prevenir Queimadas</h3>
+            <p>Não brinque com fogo perto de áreas verdes e plantações.</p>
+        </article>
 
-    <footer>
-        <p>© 2026 agrinho e vitinho no cuidado com o meio ambiente</p>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<section>
+    <h2>O que é recomendado fazer?</h2>
+
+    <ul>
+        <li>Não desmatar.</li>
+        <li>Não provocar queimadas.</li>
+        <li>Não jogar lixo no chão.</li>
+        <li>Guardar e descartar corretamente os resíduos.</li>
+        <li>Cuidar das plantações.</li>
+        <li>Plantar mais árvores.</li>
+    </ul>
+</section>
+
+<section id="quiz">
+    <h2>Quiz Rápido</h2>
+
+    <p>O que fazer com o seu lixo?</p>
+
+    <button onclick="verificarResposta('jogar no chão')">Jogar no chão</button>
+    <button onclick="verificarResposta('jogar na mata')">Jogar na mata</button>
+    <button onclick="verificarResposta('guardar e jogar no lixo')">
+        Guardar e jogar no lixo
+    </button>
+
+    <p id="resultado" aria-live="polite"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Agrinho e Vitinho no cuidado com o meio ambiente</p>
+</footer>
+
+<script>
+let tamanhoFonte = 100;
+
+function aumentarFonte(){
+    tamanhoFonte += 10;
+    document.body.style.fontSize = tamanhoFonte + "%";
+}
+
+function diminuirFonte(){
+    if(tamanhoFonte > 70){
+        tamanhoFonte -= 10;
+        document.body.style.fontSize = tamanhoFonte + "%";
+    }
+}
+
+function verificarResposta(resposta){
+    const resultado = document.getElementById("resultado");
+
+    if(resposta === "guardar e jogar no lixo"){
+        resultado.textContent = "✅ Correto! O lixo deve ser descartado corretamente.";
+    } else {
+        resultado.textContent = "❌ Incorreto! O lixo deve ser guardado e jogado no lixo.";
+    }
+}
+</script>
+
 </body>
 </html>
+                
